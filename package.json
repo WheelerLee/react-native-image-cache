@@ -1,6 +1,6 @@
 {
   "name": "react-native-imageview-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react native image with cache",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -21,7 +21,8 @@
   ],
   "devDependencies": {
     "react": "16.8.3",
-    "react-native": "0.59.8"
+    "react-native": "0.59.8",
+    "typescript": "^3.5.3"
   },
   "author": "WheelerLee",
   "license": "MIT",
