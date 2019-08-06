@@ -1,0 +1,32 @@
+{
+  "name": "react-native-image-cache",
+  "version": "1.0.0",
+  "description": "react native image with cache",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WheelerLee/react-native-image-cache.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "image",
+    "cache",
+    "glide",
+    "SDWebImage"
+  ],
+  "devDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.8"
+  },
+  "author": "WheelerLee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WheelerLee/react-native-image-cache/issues"
+  },
+  "homepage": "https://github.com/WheelerLee/react-native-image-cache#readme"
+}
