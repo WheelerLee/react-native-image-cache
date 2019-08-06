@@ -1,6 +1,6 @@
 {
   "name": "react-native-imageview-cache",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react native image with cache",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/WheelerLee/react-native-imageview-cache/issues"
   },
-  "homepage": "https://github.com/WheelerLee/react-native-imageview-cache#readme"
+  "homepage": "https://github.com/WheelerLee/react-native-imageview-cache#readme",
+  "files": [
+    "index.js"
+  ]
 }
