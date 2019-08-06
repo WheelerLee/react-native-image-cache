@@ -1,5 +1,5 @@
 {
-  "name": "react-native-image-cache",
+  "name": "react-native-imageview-cache",
   "version": "1.0.0",
   "description": "react native image with cache",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WheelerLee/react-native-image-cache.git"
+    "url": "git+https://github.com/WheelerLee/react-native-imageview-cache.git"
   },
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
   "author": "WheelerLee",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WheelerLee/react-native-image-cache/issues"
+    "url": "https://github.com/WheelerLee/react-native-imageview-cache/issues"
   },
-  "homepage": "https://github.com/WheelerLee/react-native-image-cache#readme"
+  "homepage": "https://github.com/WheelerLee/react-native-imageview-cache#readme"
 }
