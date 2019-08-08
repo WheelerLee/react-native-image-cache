@@ -32,7 +32,10 @@
   },
   "homepage": "https://github.com/WheelerLee/react-native-imageview-cache#readme",
   "files": [
-    "index.js"
+    "android",
+    "ios",
+    "lib",
+    "react-native-imageview-cache.podspec"
   ],
   "dependencies": {
     "@types/react": "^16.8.25",
