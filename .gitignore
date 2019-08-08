@@ -65,3 +65,4 @@ fastlane/test_output
 fastlane/readme.md
 ios/RNImageView.xcodeproj/project.xcworkspace
 ios/RNImageView.xcodeproj/xcuserdata
+lib
