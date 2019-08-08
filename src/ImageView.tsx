@@ -3,7 +3,7 @@
  * Contacts
  * Copyright 2019 https://github.com/WheelerLee
  */
-import React from 'react';
+import * as React from 'react';
 import {Component} from 'react';
 import {View, requireNativeComponent, StyleSheet, ViewStyle} from 'react-native';
 
