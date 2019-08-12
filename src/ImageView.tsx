@@ -9,7 +9,7 @@ import {View, requireNativeComponent, StyleSheet, ViewStyle} from 'react-native'
 
 const RNImageView = requireNativeComponent("RNImageView");
 
-interface ProgressEvent {
+export interface ProgressEvent {
   /**
    * 已经接收的大小
    */
@@ -24,12 +24,12 @@ interface ProgressEvent {
   progress: number
 }
 
-interface ErrorEvent {
+export interface ErrorEvent {
   code?: string,
   message?: string
 }
 
-interface Props {
+export interface ImageViewProps {
   /**
    * 样式
    */
@@ -60,9 +60,9 @@ interface Props {
 /**
  * 网络图片加载组件，自动包含缓存
  */
-export default class ImageView extends Component<Props> {
+export default class ImageView extends Component<ImageViewProps> {
 
-  constructor(props: Props) {
+  constructor(props: ImageViewProps) {
     super(props);
   }
 
