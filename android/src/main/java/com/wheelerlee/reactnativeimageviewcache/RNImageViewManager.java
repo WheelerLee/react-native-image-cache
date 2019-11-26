@@ -85,7 +85,7 @@ public class RNImageViewManager extends SimpleViewManager<ImageView> {
                 .load(source.getString("uri"))
                 .listener(new RequestListener<Drawable>() {
                     @Override
-                    public boolean onLoadFailed(@android.support.annotation.Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                    public boolean onLoadFailed(@androidx.annotation.Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
                         WritableMap event = new WritableNativeMap();
                         event.putString("message", e.getMessage());
                         RCTEventEmitter eventEmitter = ((ThemedReactContext)imageView.getContext()).getJSModule(RCTEventEmitter.class);
