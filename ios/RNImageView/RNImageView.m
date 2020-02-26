@@ -10,6 +10,8 @@
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
 
+NSDictionary *defaultSource;
+
 @interface RNImageView()
 
 @end
@@ -35,6 +37,16 @@
       if (self->_onLoadStart) {
         self->_onLoadStart(@{});
       }
+     
+      UIImage *defaultImg;
+      if (defaultSource) {
+        if (_source[@"defaultSource"]) {
+            defaultImg =[UIImage imageNamed:_source[@"defaultSource"]];
+        } else {
+            defaultImg =[UIImage imageNamed:defaultSource[@"default"]];
+        }
+      }
+        
       [self sd_setImageWithURL:[NSURL URLWithString:_source[@"uri"]] placeholderImage:[UIImage imageNamed:@"bg_default"] options:options progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         if (self->_onProgress) {
           self->_onProgress(@{
@@ -90,6 +102,8 @@
   [self loadImage];
 }
 
-
++ (void)initDefaultSource:(NSDictionary *)source {
+    defaultSource = source;
+}
 
 @end

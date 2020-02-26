@@ -25,4 +25,6 @@
 @property (nonatomic, copy) RCTDirectEventBlock onError;
 @property (nonatomic, copy) RCTDirectEventBlock onLoadComplete;
 
++ (void)initDefaultSource: (NSDictionary *) source;
+
 @end

@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import {Component} from 'react';
-import {View, requireNativeComponent, StyleSheet, ViewStyle} from 'react-native';
+import {View, requireNativeComponent, StyleSheet, ViewStyle, StyleProp} from 'react-native';
 
 const RNImageView = requireNativeComponent("RNImageView");
 
@@ -13,15 +13,15 @@ export interface ProgressEvent {
   /**
    * 已经接收的大小
    */
-  receivedSize: number,
+  receivedSize: number;
   /**
    * 文件总大小
    */
-  expectedSize: number,
+  expectedSize: number;
   /**
    * 进度百分比
    */
-  progress: number
+  progress: number;
 }
 
 export interface ErrorEvent {
@@ -33,7 +33,7 @@ export interface ImageViewProps {
   /**
    * 样式
    */
-  style?: ViewStyle,
+  style?: StyleProp<ViewStyle>;
   /**
    * 图片源
    */
@@ -41,20 +41,24 @@ export interface ImageViewProps {
     /**
      * 图片地址
      */
-    uri: string,
+    uri: string;
     /**
      * 图片显示质量
      */
-    priority?: 'normal' | 'high' | 'low'
-  },
+    priority?: 'normal' | 'high' | 'low';
+    /**
+     * 默认显示的图片，加载前，加载失败等都会显示。和native设置的key对应
+     */
+    defaultSource?: string;
+  };
   /**
    * 图片裁剪模式
    */
-  resizeMode?: 'cover' | 'contain' | 'stretch',
-  onLoadStart?: () => void,
-  onProgress?: (event: ProgressEvent) => void,
-  onError?: (event: ErrorEvent) => void,
-  onLoadComplete?: () => void
+  resizeMode?: 'cover' | 'contain' | 'stretch';
+  onLoadStart?: () => void;
+  onProgress?: (event: ProgressEvent) => void;
+  onError?: (event: ErrorEvent) => void;
+  onLoadComplete?: () => void;
 }
 
 /**
