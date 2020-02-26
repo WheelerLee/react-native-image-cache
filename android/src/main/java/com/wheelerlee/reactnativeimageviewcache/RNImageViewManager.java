@@ -77,7 +77,7 @@ public class RNImageViewManager extends SimpleViewManager<ImageView> {
 
         RequestOptions requestOptions = new RequestOptions();
         if (RNImageView.defaultSource != null) {
-            if (source.getString("defaultSource") != null) {
+            if (source.hasKey("defaultSource")) {
                 requestOptions.placeholder(RNImageView.defaultSource.get(source.getString("defaultSource")).intValue());
                 requestOptions.error(RNImageView.defaultSource.get(source.getString("defaultSource")).intValue());
             } else {
