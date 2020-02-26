@@ -41,9 +41,9 @@ NSDictionary *defaultSource;
       UIImage *defaultImg;
       if (defaultSource) {
         if (_source[@"defaultSource"]) {
-            defaultImg =[UIImage imageNamed:_source[@"defaultSource"]];
+            defaultImg =[UIImage imageNamed:defaultSource[_source[@"defaultSource"]]];
         } else {
-            defaultImg =[UIImage imageNamed:defaultSource[@"default"]];
+            defaultImg = [UIImage imageNamed:defaultSource[@"default"]];
         }
       }
         

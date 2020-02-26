@@ -76,6 +76,15 @@ public class RNImageViewManager extends SimpleViewManager<ImageView> {
         });
 
         RequestOptions requestOptions = new RequestOptions();
+        if (RNImageView.defaultSource != null) {
+            if (source.getString("defaultSource") != null) {
+                requestOptions.placeholder(RNImageView.defaultSource.get(source.getString("defaultSource")).intValue());
+                requestOptions.error(RNImageView.defaultSource.get(source.getString("defaultSource")).intValue());
+            } else {
+                requestOptions.placeholder(RNImageView.defaultSource.get("default").intValue());
+                requestOptions.error(RNImageView.defaultSource.get("default").intValue());
+            }
+        }
 //        requestOptions.placeholder(this.defaultSource);
 //        requestOptions.error(this.defaultSource);
         RCTEventEmitter eventEmitter = ((ThemedReactContext)imageView.getContext()).getJSModule(RCTEventEmitter.class);
