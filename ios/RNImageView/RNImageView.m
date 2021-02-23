@@ -48,7 +48,7 @@ NSDictionary *defaultSource;
       }
         
       [self sd_setImageWithURL:[NSURL URLWithString:_source[@"uri"]] placeholderImage:defaultImg ? defaultImg : [UIImage imageNamed:@"bg_default"] options:options progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        if (self->_onProgress) {
+        if (self->_onProgress && expectedSize) {
           self->_onProgress(@{
                               @"progress": @((int) 100 * receivedSize / expectedSize),
                               @"receivedSize": @(receivedSize),
